@@ -16,7 +16,7 @@ public class JenkinsDemoApplication {
 	public void initFunc() {
 		logger.info("Some changes to the project");
 		logger.info("Application started");
-		logger.info("Now the build will succeed");
+		logger.info("Fail the build to check in email.");
 	}
 
 	public static void main(String[] args) {
