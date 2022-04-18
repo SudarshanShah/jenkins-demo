@@ -12,9 +12,10 @@ class JenkinsDemoApplicationTests {
 	private static final Logger logger = LoggerFactory.getLogger(JenkinsDemoApplicationTests.class);
 
 	@Test
-	public void contextLoads() {
+	public contextLoads() {
 		logger.info("Test case running...");
 		logger.info("Test case continue to run...");
+		logger.info("Test case for fail build");
 		Assertions.assertEquals(true, true);
 	}
 
