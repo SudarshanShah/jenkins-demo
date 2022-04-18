@@ -14,6 +14,7 @@ public class JenkinsDemoApplication {
 
 	@PostConstruct
 	public void initFunc() {
+		logger.info("Some changes to the project");
 		logger.info("Application started");
 	}
 
