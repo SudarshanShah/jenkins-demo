@@ -4,11 +4,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 import javax.annotation.PostConstruct;
 
 @SpringBootApplication
-public class JenkinsDemoApplication {
+public class JenkinsDemoApplication extends SpringBootServletInitializer {
 
 	private static final Logger logger = LoggerFactory.getLogger(JenkinsDemoApplication.class);
 
@@ -24,4 +26,8 @@ public class JenkinsDemoApplication {
 		SpringApplication.run(JenkinsDemoApplication.class, args);
 	}
 
+	@Override
+	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
+		return builder.sources(JenkinsDemoApplication.class);
+	}
 }
